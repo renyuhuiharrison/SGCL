@@ -37,3 +37,5 @@
 SGCL/x64/
 x64/
 *.user
+*.props
+.vs/
