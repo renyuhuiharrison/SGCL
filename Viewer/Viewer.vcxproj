@@ -66,7 +66,7 @@
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>$(VTK_LIB);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>vtkGUISupportQt-9.1d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>vtkGUISupportQt-9.1d.lib;vtkRenderingCore-9.1d.lib;vtkCommonCore-9.1d.lib;vtkRenderingContextOpenGL2-9.1d.lib;vtkRenderingContext2D-9.1d.lib;vtkViewsContext2D-9.1d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
@@ -101,6 +101,9 @@
     <QtMoc Include="MainWindow.h" />
     <ClCompile Include="MainWindow.cpp" />
     <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="TestContextItem.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
